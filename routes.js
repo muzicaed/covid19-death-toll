@@ -1,8 +1,16 @@
+const DataProcessor = require('./lib/data-processor')
+
 module.exports = {
   attachRoutes: (server) => {
 
     server.get('/data.json', async (req, res) => {
-      res.send('Hello World')
+      try {
+        const data = await DataProcessor.getData()
+        res.json(data)
+      } catch (e) {
+        console.log(e)
+        res.status(500).send()
+      }
     })
 
   }
