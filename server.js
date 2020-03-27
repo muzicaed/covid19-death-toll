@@ -14,6 +14,7 @@ function addMiddleware(server) {
   server.use(CacheControl({
     noCache: true
   }))
+  server.use(Express.static('public'))
   server.use(BodyParser.json())
   server.use(BodyParser.urlencoded({
     extended: false
