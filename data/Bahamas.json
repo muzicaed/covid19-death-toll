@@ -1,0 +1,114 @@
+{
+  "nhits": 11,
+  "parameters": {
+    "dataset": [
+      "world-population@kapsarc"
+    ],
+    "timezone": "UTC",
+    "q": "Bahamas",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "a1f9724cdc6cfd053396e069451d9223a91c281f",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 367168,
+        "year": "2013"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "2d75c0bf34e15d74f57ebc36fda075a20f00f285",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 298051,
+        "year": "2000"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "b760374f275654eff4e957ac6e253d47689fd282",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 370633,
+        "year": "2014"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "3d5f78c9e3235a0608aebf50b79ae8b0fcdf9f77",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 374206,
+        "year": "2015"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "43a5478da5d7e5ac559ae0746bb8e95d60cbd247",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 256223,
+        "year": "1990"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "2ea40ee1d2b8a89c01ebc6c0dfdab8626d8e5e0b",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 381761,
+        "year": "2017"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "2c7983293c0d0197b9a82bc54a5d8e0569099cee",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 359577,
+        "year": "2011"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "b272c33ae27251b0e391449244f045536288eab6",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 385640,
+        "year": "2018"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "2cba1cd6e9041204d48b3cf9061c2a95c50df0a5",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 377931,
+        "year": "2016"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "8231c88827f95acb5a197b3e22b1fdd9e321dc8a",
+      "fields": {
+        "country_name": "Bahamas, The",
+        "value": 354942,
+        "year": "2010"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    }
+  ]
+}

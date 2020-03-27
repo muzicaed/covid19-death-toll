@@ -16,5 +16,10 @@
     "express": "^4.17.1",
     "express-cache-controller": "^1.1.0",
     "moment": "^2.24.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
   }
 }
