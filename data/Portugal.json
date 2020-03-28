@@ -1,1 +1,124 @@
-{"nhits":11,"parameters":{"dataset":["world-population@kapsarc"],"timezone":"UTC","q":"Portugal","rows":10,"format":"json"},"records":[{"datasetid":"world-population@kapsarc","recordid":"46ea15e33d26fd207f6ff855913468f7ae7744dc","fields":{"country_name":"Portugal","value":10300300,"year":"2017"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"360b97fcb1a273657e6c4f9cb2463058087b363a","fields":{"country_name":"Portugal","value":10573100,"year":"2010"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"4773f3b43d47565427ba8838c1bf511819e3c049","fields":{"country_name":"Portugal","value":9983218,"year":"1990"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"bf04cb3c84f6e5e11697335d8a33bc3d7d16af9b","fields":{"country_name":"Portugal","value":10557560,"year":"2011"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"890a149b093d2867ce2804cde14a458e69b6420d","fields":{"country_name":"Portugal","value":10514844,"year":"2012"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"c9d8fb02c3a0fb513a5e7d5738a470581a7f3bd1","fields":{"country_name":"Portugal","value":10281762,"year":"2018"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"2f0abaaae8f61082a1d4362c8e3e2a7089c3b351","fields":{"country_name":"Portugal","value":10358076,"year":"2015"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"78be9f154e85217fb77dc0d2473ebd4b625cb18b","fields":{"country_name":"Portugal","value":10289898,"year":"2000"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"a197370a5d582229925c03c3d8d4ee96b702917b","fields":{"country_name":"Portugal","value":10401062,"year":"2014"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"25ef85a2c6bbdcc17954b0f5e29fc1627abad6a4","fields":{"country_name":"Portugal","value":10325452,"year":"2016"},"record_timestamp":"1970-01-01T00:00:00+00:00"}]}
+{
+  "nhits": 11,
+  "parameters": {
+    "dataset": [
+      "world-population@kapsarc"
+    ],
+    "timezone": "UTC",
+    "q": "Portugal",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "46ea15e33d26fd207f6ff855913468f7ae7744dc",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10300300,
+        "year": "2017"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "360b97fcb1a273657e6c4f9cb2463058087b363a",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10573100,
+        "year": "2010"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "4773f3b43d47565427ba8838c1bf511819e3c049",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 9983218,
+        "year": "1990"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "bf04cb3c84f6e5e11697335d8a33bc3d7d16af9b",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10557560,
+        "year": "2011"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "890a149b093d2867ce2804cde14a458e69b6420d",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10514844,
+        "year": "2012"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "c9d8fb02c3a0fb513a5e7d5738a470581a7f3bd1",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10281762,
+        "year": "2018"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "2f0abaaae8f61082a1d4362c8e3e2a7089c3b351",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10358076,
+        "year": "2015"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "78be9f154e85217fb77dc0d2473ebd4b625cb18b",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10289898,
+        "year": "2000"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "a197370a5d582229925c03c3d8d4ee96b702917b",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10401062,
+        "year": "2014"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "25ef85a2c6bbdcc17954b0f5e29fc1627abad6a4",
+      "fields": {
+        "country_name": "Portugal",
+        "value": 10325452,
+        "year": "2016"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "25ef85a2c6bbdcc17954b0f5e29fc1627abad6a4",
+      "fields": {
+        "country_name": "Portugal - MANUAL",
+        "value": 10204269,
+        "year": "2020"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    }
+  ]
+}
