@@ -9,7 +9,6 @@ CovidDataTable.execute = function () {
     })
     $.each(countries, function (i, country) {
       if (country.total && country.total > 0) {
-        console.log(country.totalPm);
         var tr = $('<tr></tr>')
         tr.append('<th scope="row">' + (i + 1) + '</th>');
         tr.append('<td>' + country.country + '</td>');
