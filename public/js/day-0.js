@@ -33,15 +33,28 @@ function updateChart() {
       options: {
         scales: {
           yAxes: [{
+            type: 'logarithmic',
+            ticks: {
+              callback: function (value, index, values) {
+                if (value === 1000000) return "1M";
+                if (value === 100000) return "100K";
+                if (value === 10000) return "10K";
+                if (value === 1000) return "1K";
+                if (value === 100) return "100";
+                if (value === 10) return "10";
+                if (value === 0) return "0";
+                return null;
+              }
+            },
             scaleLabel: {
               display: true,
-              labelString: 'Death toll, per million population'
+              labelString: 'Death toll, per million population (logarithmic)'
             }
           }],
           xAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Days since 1 death per million population'
+              labelString: 'Day 0 = First day when death per million population > 1.0'
             }
           }]
         }
