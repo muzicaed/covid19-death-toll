@@ -16,6 +16,7 @@ CovidDayZero.borderColors = {
 }
 
 CovidDayZero.execute = function () {
+  initChart();
   $.getJSON('/data.json', function (data) {
     CovidDayZero.data = data;
     prepareSelect();
@@ -23,13 +24,12 @@ CovidDayZero.execute = function () {
   });
 }
 
-function updateChart() {
+function initChart() {
   var canvas = $('#day-0');
-  var data = prepareData();
   if (canvas) {
     CovidDayZero.chart = new Chart(canvas, {
       type: 'line',
-      data: data,
+      data: null,
       options: {
         scales: {
           yAxes: [{
@@ -63,6 +63,15 @@ function updateChart() {
   }
 }
 
+function updateChart() {
+  if (CovidDayZero.chart) {
+    var data = prepareData();
+    CovidDayZero.chart.data.labels = data.labels;
+    CovidDayZero.chart.data.datasets = data.datasets;
+    CovidDayZero.chart.update();
+  }
+}
+
 function prepareData() {
   var datasets = [];
   $.each(CovidDayZero.countries, function (key, country) {
@@ -80,7 +89,6 @@ function createDataset(key, country) {
   var data = []
   var countryData = CovidDayZero.data[country].datesAccumulatedPm;
   var zeroDate = new Date(CovidDayZero.data[country].dayZero);
-  console.log(zeroDate);
   $.each(countryData, function (date, value) {
     if (new Date(date) > zeroDate && CovidDayZero.data[country].dayZero !== null) {
       data.push(value);
