@@ -6,8 +6,8 @@ CovidDayZero.datesChart = null;
 CovidDayZero.countries = {
   c1: 'Italy',
   c2: 'Spain',
-  c3: 'Iran',
-  c4: 'US'
+  c3: 'US',
+  c4: 'Sweden'
 }
 CovidDayZero.borderColors = {
   c1: '#22cc22',
