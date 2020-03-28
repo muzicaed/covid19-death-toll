@@ -87,7 +87,7 @@ function prepareData() {
 
 function createDataset(key, country) {
   var data = []
-  var countryData = CovidDayZero.data[country].datesAccumulatedPm;
+  var countryData = CovidDayZero.data[country].datesPm;
   var zeroDate = new Date(CovidDayZero.data[country].dayZero);
   $.each(countryData, function (date, value) {
     if (new Date(date) > zeroDate && CovidDayZero.data[country].dayZero !== null) {
