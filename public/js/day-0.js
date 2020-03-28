@@ -1,12 +1,13 @@
 var CovidDayZero = {};
 
 CovidDayZero.data = null;
-CovidDayZero.chart = null;
+CovidDayZero.zeroChart = null;
+CovidDayZero.datesChart = null;
 CovidDayZero.countries = {
   c1: 'Italy',
-  c2: 'US',
-  c3: 'Spain',
-  c4: null
+  c2: 'Spain',
+  c3: 'Iran',
+  c4: 'US'
 }
 CovidDayZero.borderColors = {
   c1: '#22cc22',
@@ -25,58 +26,36 @@ CovidDayZero.execute = function () {
 }
 
 function initChart() {
-  var canvas = $('#day-0');
-  if (canvas) {
-    CovidDayZero.chart = new Chart(canvas, {
-      type: 'line',
-      data: null,
-      options: {
-        scales: {
-          yAxes: [{
-            type: 'logarithmic',
-            ticks: {
-              callback: function (value, index, values) {
-                if (value === 1000000) return "1M";
-                if (value === 100000) return "100K";
-                if (value === 10000) return "10K";
-                if (value === 1000) return "1K";
-                if (value === 100) return "100";
-                if (value === 10) return "10";
-                if (value === 0) return "0";
-                return null;
-              }
-            },
-            scaleLabel: {
-              display: true,
-              labelString: 'Death toll, per million population (logarithmic)'
-            }
-          }],
-          xAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: 'Day 0 = First day when death per million population > 1.0'
-            }
-          }]
-        }
-      }
-    });
+  var zeroCanvas = $('#day-0');
+  if (zeroCanvas) {
+    CovidDayZero.zeroChart = createChart(zeroCanvas, 'Day 0 = First day when death per million population > 1.0');
+  }
+  var datesCanvas = $('#dates');
+  if (datesCanvas) {
+    CovidDayZero.datesChart = createChart(datesCanvas, 'Dates');
   }
 }
 
 function updateChart() {
-  if (CovidDayZero.chart) {
-    var data = prepareData();
-    CovidDayZero.chart.data.labels = data.labels;
-    CovidDayZero.chart.data.datasets = data.datasets;
-    CovidDayZero.chart.update();
+  if (CovidDayZero.zeroChart) {
+    var zeroData = prepareZeroData();
+    CovidDayZero.zeroChart.data.labels = zeroData.labels;
+    CovidDayZero.zeroChart.data.datasets = zeroData.datasets;
+    CovidDayZero.zeroChart.update();
+  }
+  if (CovidDayZero.datesChart) {
+    var datesData = prepareDatesData();
+    CovidDayZero.datesChart.data.labels = datesData.labels;
+    CovidDayZero.datesChart.data.datasets = datesData.datasets;
+    CovidDayZero.datesChart.update();
   }
 }
 
-function prepareData() {
+function prepareZeroData() {
   var datasets = [];
   $.each(CovidDayZero.countries, function (key, country) {
     if (country) {
-      datasets.push(createDataset(key, country))
+      datasets.push(createZeroDataset(key, country));
     }
   });
   return {
@@ -85,7 +64,7 @@ function prepareData() {
   };
 }
 
-function createDataset(key, country) {
+function createZeroDataset(key, country) {
   var data = []
   var countryData = CovidDayZero.data[country].datesPm;
   var zeroDate = new Date(CovidDayZero.data[country].dayZero);
@@ -98,6 +77,34 @@ function createDataset(key, country) {
   return {
     label: country,
     data: objValues(data),
+    lineTension: 0.1,
+    borderColor: CovidDayZero.borderColors[key],
+    backgroundColor: 'rgba(0,0,0,0)'
+  };
+}
+
+function prepareDatesData() {
+  var datasets = [];
+  var labels = null;
+  $.each(CovidDayZero.countries, function (key, country) {
+    if (country) {
+      datasets.push(createDatesDataset(key, country));
+    }
+    if (!labels) {
+      labels = Object.keys(CovidDayZero.data[country].dates);
+    }
+  });
+  return {
+    labels: labels,
+    datasets: datasets
+  };
+}
+
+function createDatesDataset(key, country) {
+  var countryData = CovidDayZero.data[country].datesPm;
+  return {
+    label: country,
+    data: objValues(countryData),
     lineTension: 0.1,
     borderColor: CovidDayZero.borderColors[key],
     backgroundColor: 'rgba(0,0,0,0)'
@@ -118,12 +125,6 @@ function createLabels(datasets) {
   return lables;
 }
 
-function objValues(obj) {
-  return $.map(obj, function (value, index) {
-    return [value];
-  });
-}
-
 function prepareSelect() {
   var countries = Object.keys(CovidDayZero.data);
   countries = countries.sort();
@@ -142,6 +143,51 @@ function prepareSelect() {
       CovidDayZero.countries[id] = this.value;
       updateChart();
     });
+  });
+}
+
+
+function createChart(canvas, xTitle) {
+  return new Chart(canvas, {
+    type: 'line',
+    data: null,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          type: 'logarithmic',
+          ticks: {
+            callback: function (value, index, values) {
+              if (value === 1000000) return "1M";
+              if (value === 100000) return "100K";
+              if (value === 10000) return "10K";
+              if (value === 1000) return "1K";
+              if (value === 100) return "100";
+              if (value === 10) return "10";
+              if (value === 0) return "0";
+              return null;
+            }
+          },
+          scaleLabel: {
+            display: true,
+            labelString: 'Death toll, per million population (logarithmic)'
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: xTitle
+          }
+        }]
+      }
+    }
+  });
+}
+
+function objValues(obj) {
+  return $.map(obj, function (value, index) {
+    return [value];
   });
 }
 

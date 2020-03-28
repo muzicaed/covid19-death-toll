@@ -12,76 +12,51 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
     integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-  <script src="/js/day-0.js"></script>
+  <script src="/js/data-table.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">COVID-19 Death Toll Stats</a>
+    <a class="navbar-brand" href="#">COVID-19 Stats</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="/index.html">Country Comparison</a>
+          <a class="nav-link" href="/index.html">Country Comparison</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/table.html">Data Table</a>
+          <a class="nav-link active" href="/table.html">Data Table</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container" style="margin-top: 1em;">
-    <div class="row sticky-top country-select-wrapper">
-      <div class="col-3">
-        <select class="custom-select country-select" id="c1">
-          <option value="">No country</option>
-        </select>
-      </div>
-      <div class="col-3">
-        <select class="custom-select country-select" id="c2">
-          <option value="">No country</option>
-        </select>
-      </div>
-      <div class="col-3">
-        <select class="custom-select country-select" id="c3">
-          <option value="">No country</option>
-        </select>
-      </div>
-      <div class="col-3">
-        <select class="custom-select country-select" id="c4">
-          <option value="">No country</option>
-        </select>
-      </div>
-    </div>
     <div class="row" style="margin-bottom:1em">
       <div class="col-12">
-        <h2>Day-0 Country comparison, death toll per million population</h2>
+        <h2>Data table per country</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="card">
-          <div class="card-body">
-            <canvas id="day-0"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="margin-top: 2em">
-      <div class="col-12">
-        <h2>Per date Country comparison, death toll per million population</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="card">
-          <div class="card-body">
-            <canvas id="dates"></canvas>
-          </div>
-        </div>
+        <div>Ordered by Death per million (Death PM)</div>
+        <div><sup>*</sup>Day 0 = Date when death per million population > 1.0</div>
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Country</th>
+              <th scope="col">Death toll</th>
+              <th scope="col">Death PM</th>
+              <th scope="col">Population</th>
+              <th scope="col">Day-0<sup>*</sup></th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
