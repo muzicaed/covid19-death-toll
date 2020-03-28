@@ -109,6 +109,16 @@
         "year": "2015"
       },
       "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "5b7d95ec9e59008d00fa71aec2ecc844b8ccb521",
+      "fields": {
+        "country_name": "United States - MANUAL",
+        "value": 330499410.0,
+        "year": "2020"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
     }
   ]
 }

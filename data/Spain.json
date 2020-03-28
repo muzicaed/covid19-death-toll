@@ -1,1 +1,124 @@
-{"nhits":11,"parameters":{"dataset":["world-population@kapsarc"],"timezone":"UTC","q":"Spain","rows":10,"format":"json"},"records":[{"datasetid":"world-population@kapsarc","recordid":"37aa72c52673c5f3b558764ec6660b0af9edea49","fields":{"country_name":"Spain","value":46576897,"year":"2010"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"f8003d9c0872a6a1441ff057a3832c96c733a04e","fields":{"country_name":"Spain","value":46723749,"year":"2018"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"5cd420613336af5adcc6f0b603368bad1217ca99","fields":{"country_name":"Spain","value":46773055,"year":"2012"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"332ca70272a67e0fd0895c9efd32f2a99678f35f","fields":{"country_name":"Spain","value":40567864,"year":"2000"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"916343e7ce0778f4b4d57efdf42591fb504cc354","fields":{"country_name":"Spain","value":46444832,"year":"2015"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"2274708995848a884e6c7d36b526977e54f567f4","fields":{"country_name":"Spain","value":46593236,"year":"2017"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"ac861ee9fcd5986f48294218329bb4e43fecda7d","fields":{"country_name":"Spain","value":38867322,"year":"1990"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"43bef16526e31e896377a9c8ec237137a1177ca8","fields":{"country_name":"Spain","value":46480882,"year":"2014"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"1095a5b661f5ae17a8090631b75d663b4d127069","fields":{"country_name":"Spain","value":46483569,"year":"2016"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"24ed94c4af7390fa212ec91f6d6bafcc908b220a","fields":{"country_name":"Spain","value":46742697,"year":"2011"},"record_timestamp":"1970-01-01T00:00:00+00:00"}]}
+{
+  "nhits": 11,
+  "parameters": {
+    "dataset": [
+      "world-population@kapsarc"
+    ],
+    "timezone": "UTC",
+    "q": "Spain",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "37aa72c52673c5f3b558764ec6660b0af9edea49",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46576897,
+        "year": "2010"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "f8003d9c0872a6a1441ff057a3832c96c733a04e",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46723749,
+        "year": "2018"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "5cd420613336af5adcc6f0b603368bad1217ca99",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46773055,
+        "year": "2012"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "332ca70272a67e0fd0895c9efd32f2a99678f35f",
+      "fields": {
+        "country_name": "Spain",
+        "value": 40567864,
+        "year": "2000"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "916343e7ce0778f4b4d57efdf42591fb504cc354",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46444832,
+        "year": "2015"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "2274708995848a884e6c7d36b526977e54f567f4",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46593236,
+        "year": "2017"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "ac861ee9fcd5986f48294218329bb4e43fecda7d",
+      "fields": {
+        "country_name": "Spain",
+        "value": 38867322,
+        "year": "1990"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "43bef16526e31e896377a9c8ec237137a1177ca8",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46480882,
+        "year": "2014"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "1095a5b661f5ae17a8090631b75d663b4d127069",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46483569,
+        "year": "2016"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "24ed94c4af7390fa212ec91f6d6bafcc908b220a",
+      "fields": {
+        "country_name": "Spain",
+        "value": 46742697,
+        "year": "2011"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "24ed94c4af7390fa212ec91f6d6bafcc908b220a",
+      "fields": {
+        "country_name": "Spain - MANUAL",
+        "value": 46750139,
+        "year": "2020"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    }
+  ]
+}

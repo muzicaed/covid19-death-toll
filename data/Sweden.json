@@ -1,1 +1,124 @@
-{"nhits":11,"parameters":{"dataset":["world-population@kapsarc"],"timezone":"UTC","q":"Sweden","rows":10,"format":"json"},"records":[{"datasetid":"world-population@kapsarc","recordid":"776eaafc9d9a723342345b4038f5fb44e31a327b","fields":{"country_name":"Sweden","value":8558835,"year":"1990"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"643152f681076c316be20bdf6eac4d63cfe5afc6","fields":{"country_name":"Sweden","value":9378126,"year":"2010"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"51376749cbd9f62331888ff7d07998d4332cd40b","fields":{"country_name":"Sweden","value":10183175,"year":"2018"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"0a8f3a768c9c281c38826919e96261ba4f39c610","fields":{"country_name":"Sweden","value":9449213,"year":"2011"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"ed73fe876e97173ef3b8d4a57aa21fd770477d0b","fields":{"country_name":"Sweden","value":9600379,"year":"2013"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"18570318f52f2ad8ef69224950b9117ee98308bf","fields":{"country_name":"Sweden","value":8872109,"year":"2000"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"29bf5a2cc7025af85ab1e9c82345d018c49863b0","fields":{"country_name":"Sweden","value":9799186,"year":"2015"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"39838fe0e74c63b501bef1560d62eb22eee6be26","fields":{"country_name":"Sweden","value":9696110,"year":"2014"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"796d25c3bfaf62d12df97878926a7f346bdd2525","fields":{"country_name":"Sweden","value":10057698,"year":"2017"},"record_timestamp":"1970-01-01T00:00:00+00:00"},{"datasetid":"world-population@kapsarc","recordid":"1f71bb1e230ad52c6133594649e0c237125426cf","fields":{"country_name":"Sweden","value":9923085,"year":"2016"},"record_timestamp":"1970-01-01T00:00:00+00:00"}]}
+{
+  "nhits": 11,
+  "parameters": {
+    "dataset": [
+      "world-population@kapsarc"
+    ],
+    "timezone": "UTC",
+    "q": "Sweden",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "776eaafc9d9a723342345b4038f5fb44e31a327b",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 8558835,
+        "year": "1990"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "643152f681076c316be20bdf6eac4d63cfe5afc6",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 9378126,
+        "year": "2010"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "51376749cbd9f62331888ff7d07998d4332cd40b",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 10183175,
+        "year": "2018"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "0a8f3a768c9c281c38826919e96261ba4f39c610",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 9449213,
+        "year": "2011"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "ed73fe876e97173ef3b8d4a57aa21fd770477d0b",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 9600379,
+        "year": "2013"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "18570318f52f2ad8ef69224950b9117ee98308bf",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 8872109,
+        "year": "2000"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "29bf5a2cc7025af85ab1e9c82345d018c49863b0",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 9799186,
+        "year": "2015"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "39838fe0e74c63b501bef1560d62eb22eee6be26",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 9696110,
+        "year": "2014"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "796d25c3bfaf62d12df97878926a7f346bdd2525",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 10057698,
+        "year": "2017"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "1f71bb1e230ad52c6133594649e0c237125426cf",
+      "fields": {
+        "country_name": "Sweden",
+        "value": 9923085,
+        "year": "2016"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "1f71bb1e230ad52c6133594649e0c237125426cf",
+      "fields": {
+        "country_name": "Sweden - MANUAL",
+        "value": 10082924,
+        "year": "2020"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    }
+  ]
+}
