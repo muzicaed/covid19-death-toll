@@ -7,7 +7,7 @@ const Routes = require('./routes')
 const server = Express()
 addMiddleware(server)
 Routes.attachRoutes(server)
-startServer(server, 80)
+startServer(server)
 
 function addMiddleware(server) {
   server.use(Cors())
@@ -21,7 +21,8 @@ function addMiddleware(server) {
   }))
 }
 
-function startServer(server, port) {
+function startServer(server) {
+  const port = process.env.PORT || 3000;
   if (process.env.NODE_ENV != 'test') {
     server.listen(port)
     console.info(`\n\nServer started on port: ${port}`)
