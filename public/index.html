@@ -16,11 +16,8 @@
 </head>
 
 <body>
-  <div class="text-center">
-    <h1>COVID-19 Global Stats</h1>
-  </div>
-
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">COVID-19 Stats</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,9 +37,31 @@
   </nav>
 
   <div class="container" style="margin-top:30px">
+    <h2>Day-0 Comparison</h2>
+    <div class="row" style="margin-bottom:1em">
+      <div class="col-3">
+        <select class="custom-select country-select" id="c1">
+          <option value="">Select a country...</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="custom-select country-select" id="c2">
+          <option value="">Select a country...</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="custom-select country-select" id="c3">
+          <option value="">Select a country...</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <select class="custom-select country-select" id="c4">
+          <option value="">Select a country...</option>
+        </select>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12">
-        <h2>Day-0 Comparison</h2>
         <div class="card">
           <div class="card-body">
             <canvas id="day-0"></canvas>
@@ -56,38 +75,6 @@
     <p>Copyright 2020 Mikael Hellman</p>
     <p>Data source: <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE</a></p>
   </div>
-
-  <script>
-    var chartData = {
-      labels: ["S", "M", "T", "W", "T", "F", "S"],
-      datasets: [{
-        data: [589, 445, 483, 503, 689, 692, 634],
-      },
-      {
-        data: [639, 465, 493, 478, 589, 632, 674],
-      }]
-    };
-    var test = $('#test')
-    if (test) {
-      new Chart(test, {
-        type: 'line',
-        data: chartData,
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false
-          }
-        }
-      });
-    }    
-  </script>
-
 </body>
 
 </html>

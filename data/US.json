@@ -1,1 +1,114 @@
-{"nhits":0,"parameters":{"dataset":["world-population@kapsarc"],"timezone":"UTC","q":"US","rows":10,"format":"json"},"records":[]}
+{
+  "nhits": 11,
+  "parameters": {
+    "dataset": [
+      "world-population@kapsarc"
+    ],
+    "timezone": "UTC",
+    "q": "United States",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "8bdb0fc62ac04ea458b34ad42da0e6ed58c77749",
+      "fields": {
+        "country_name": "United States",
+        "value": 318386421.0,
+        "year": "2014"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "8e3ab8db5ac074985fa347af2f1850b4894df4b8",
+      "fields": {
+        "country_name": "United States",
+        "value": 325147121.0,
+        "year": "2017"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "9f9e5fc4296af6f2691f4f6e8b1bdb4c69f30a50",
+      "fields": {
+        "country_name": "United States",
+        "value": 323071342.0,
+        "year": "2016"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "11734c6eb2603acc7422d41123c15f220d2e3671",
+      "fields": {
+        "country_name": "United States",
+        "value": 311580009.0,
+        "year": "2011"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "4e2675fced425175b983fe306bed7ea02f3950a0",
+      "fields": {
+        "country_name": "United States",
+        "value": 309326085.0,
+        "year": "2010"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "463bc67e1249696f244c760c9c546ad90a38a366",
+      "fields": {
+        "country_name": "United States",
+        "value": 316057727.0,
+        "year": "2013"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "967ddac87c3f7e3a6a0240cd42c3deffa7f9e0d9",
+      "fields": {
+        "country_name": "United States",
+        "value": 313874218.0,
+        "year": "2012"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "aa3ffe49c801228375b79d6985d91999e11422c9",
+      "fields": {
+        "country_name": "United States",
+        "value": 249623000.0,
+        "year": "1990"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "5766d41154833f7b73467f1438cc7dceaa397857",
+      "fields": {
+        "country_name": "United States",
+        "value": 282162411.0,
+        "year": "2000"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    },
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "5b7d95ec9e59008d00fa71aec2ecc844b8ccb521",
+      "fields": {
+        "country_name": "United States",
+        "value": 320742673.0,
+        "year": "2015"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    }
+  ]
+}
