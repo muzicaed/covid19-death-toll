@@ -7,7 +7,7 @@ const Routes = require('./routes')
 const server = Express()
 addMiddleware(server)
 Routes.attachRoutes(server)
-startServer(server, 3000)
+startServer(server, 80)
 
 function addMiddleware(server) {
   server.use(Cors())
