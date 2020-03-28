@@ -18,6 +18,10 @@ canvas {
  height: 400px !important;
 }
 
+.mobile-banner .card-body {
+  background-color: #ffffdc;
+}
+
 @media only screen and (max-width: 850px) {
   canvas {
     height: 250px !important;
