@@ -36,3 +36,9 @@ canvas {
     height: 250px !important;
    }
 }
+
+@media (orientation:landscape) {
+  .mobile-banner {
+      display: none;
+  }
+}
