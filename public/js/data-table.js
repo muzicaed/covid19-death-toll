@@ -11,11 +11,11 @@ CovidDataTable.execute = function () {
       if (country.total && country.total > 0) {
         var tr = $('<tr></tr>')
         tr.append('<th scope="row">' + (i + 1) + '</th>');
-        tr.append('<td>' + country.country + '</td>');
-        tr.append('<td class="text-right">' + formatNumber(country.total) + '</td>');
-        tr.append('<td class="text-right">' + formatNumber(country.totalPm) + '</td>');
-        tr.append('<td class="text-right">' + formatNumber(country.population) + '</td>');
-        tr.append('<td class="text-right">' + (country.dayZero ? country.dayZero : 'N/A') + '</td>');
+        tr.append('<td class="text-nowrap">' + country.country + '</td>');
+        tr.append('<td class="text-right text-nowrap">' + formatNumber(country.total) + '</td>');
+        tr.append('<td class="text-right text-nowrap">' + formatNumber(country.totalPm) + '</td>');
+        tr.append('<td class="text-right text-nowrap">' + formatNumber(country.population) + '</td>');
+        tr.append('<td class="text-right text-nowrap">' + (country.dayZero ? country.dayZero : 'N/A') + '</td>');
         tableBody.append(tr);
       }
     });
