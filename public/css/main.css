@@ -11,7 +11,6 @@ h1 {
   top: -1px;
   padding: 5px;
   background-color: #dbe6ff;
-  border: #ddd 1px solid;
 }
 
 canvas {
@@ -29,6 +28,21 @@ canvas {
 
 #clear-all-countries:hover {
   text-decoration: none !important;
+}
+
+#chart-type-select-wrapper {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #eee;
+  padding: 0.5em;
+}
+
+#chart-type-select-text {
+  margin-left: 1em;
+  font-size: 0.8em;
 }
 
 @media only screen and (max-width: 850px) {

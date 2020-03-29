@@ -159,6 +159,20 @@ function prepareEvents() {
       });
       updateCharts();
     });
+
+    $('#chart-type-select-wrapper #button-log').on('click', function (e) {
+      e.preventDefault();
+      $('#chart-type-select-text').html('Compact display of numerical data over a wide range. <a href="https://en.wikipedia.org/wiki/Logarithmic_scale" target="_blank">Wikipedia</a>')
+      makeChartLog(CovidDayZero.zeroChart);
+      makeChartLog(CovidDayZero.datesChart);
+    });
+
+    $('#chart-type-select-wrapper #button-lin').on('click', function (e) {
+      e.preventDefault();
+      $('#chart-type-select-text').html('"The normal way". Scale is divided into equal parts.')
+      makeChartLin(CovidDayZero.zeroChart);
+      makeChartLin(CovidDayZero.datesChart);
+    });
   });
 }
 
@@ -172,22 +186,9 @@ function createChart(canvas, xTitle) {
       maintainAspectRatio: false,
       scales: {
         yAxes: [{
-          type: 'logarithmic',
-          ticks: {
-            callback: function (value, index, values) {
-              if (value === 1000000) return "1M";
-              if (value === 100000) return "100K";
-              if (value === 10000) return "10K";
-              if (value === 1000) return "1K";
-              if (value === 100) return "100";
-              if (value === 10) return "10";
-              if (value === 0) return "0";
-              return null;
-            }
-          },
           scaleLabel: {
             display: true,
-            labelString: 'Death toll, per million population (logarithmic)'
+            labelString: 'Death toll, per million population'
           }
         }],
         xAxes: [{
@@ -220,6 +221,29 @@ function objValues(obj) {
   return $.map(obj, function (value, index) {
     return [value];
   });
+}
+
+function makeChartLog(chart) {
+  chart.options.scales.yAxes[0].type = 'logarithmic';
+  chart.options.scales.yAxes[0].scaleLabel.labelString = 'Death toll, per million population (logarithmic)';
+  chart.options.scales.yAxes[0].ticks.callback = function (value, index, values) {
+    if (value === 1000000) return "1M";
+    if (value === 100000) return "100K";
+    if (value === 10000) return "10K";
+    if (value === 1000) return "1K";
+    if (value === 100) return "100";
+    if (value === 10) return "10";
+    if (value === 0) return "0";
+    return null;
+  };
+  chart.update();
+}
+
+function makeChartLin(chart) {
+  chart.options.scales.yAxes[0].type = 'linear';
+  chart.options.scales.yAxes[0].scaleLabel.labelString = 'Death toll, per million population';
+  chart.options.scales.yAxes[0].ticks.callback = function (value, index, values) { return value };
+  chart.update();
 }
 
 $(function () {
