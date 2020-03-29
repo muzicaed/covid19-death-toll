@@ -58,8 +58,10 @@
 
   <div class="container-fluid" style="margin-top: 1em;">
     <div class="row sticky-top country-select-wrapper">
-      <div class="col d-none d-lg-block" style="display: flex; align-items: center;">
-        <div class="select-country-title"><strong>Select countries</strong></div>
+      <div class="col d-none d-lg-block">
+        <div style="display: flex; align-items: center; height: 100%;">
+          <div class="select-country-title">Select countries</div>
+        </div>
       </div>
       <div class="col">
         <select class="custom-select country-select" id="c1">
@@ -82,8 +84,9 @@
         </select>
       </div>
       <div class="col-1 d-none d-lg-block">
-        <div style="display: flex; align-items: center; height: 100%;"><a href="#" style="display: inline-block;">Clear
-            all</a></div>
+        <div id="clear-all-countries" style="display: flex; align-items: center; height: 100%;">
+          <a href="#" style="display: inline-block;">Clear all</a>
+        </div>
       </div>
     </div>
     <div class="row d-lg-none mobile-banner" style="margin-bottom:1em">

@@ -22,6 +22,11 @@ canvas {
   background-color: #ffffdc;
 }
 
+.select-country-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 850px) {
   canvas {
     height: 250px !important;

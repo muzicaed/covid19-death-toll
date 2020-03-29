@@ -28,11 +28,11 @@ CovidDayZero.execute = function () {
 function initChart() {
   var zeroCanvas = $('#day-0');
   if (zeroCanvas) {
-    CovidDayZero.zeroChart = createChart(zeroCanvas, 'Day 0 = First day when death per million population > 1.0');
+    CovidDayZero.zeroChart = createChart(zeroCanvas, 'Day 0 = Death per million population > 1.0');
   }
   var datesCanvas = $('#dates');
   if (datesCanvas) {
-    CovidDayZero.datesChart = createChart(datesCanvas, 'Dates');
+    CovidDayZero.datesChart = createChart(datesCanvas, '');
   }
 }
 
