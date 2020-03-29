@@ -20,8 +20,8 @@ CovidDayZero.execute = function () {
   initChart();
   $.getJSON('/data.json', function (data) {
     CovidDayZero.data = data;
-    prepareSelect();
-    updateChart();
+    prepareEvents();
+    updateCharts();
   });
 }
 
@@ -36,7 +36,7 @@ function initChart() {
   }
 }
 
-function updateChart() {
+function updateCharts() {
   if (CovidDayZero.zeroChart) {
     var zeroData = prepareZeroData();
     CovidDayZero.zeroChart.data.labels = zeroData.labels;
@@ -90,7 +90,7 @@ function prepareDatesData() {
     if (country) {
       datasets.push(createDatesDataset(key, country));
     }
-    if (!labels) {
+    if (country && !labels) {
       labels = Object.keys(CovidDayZero.data[country].dates);
     }
   });
@@ -125,23 +125,39 @@ function createLabels(datasets) {
   return lables;
 }
 
-function prepareSelect() {
+function prepareEvents() {
   var countries = Object.keys(CovidDayZero.data);
   countries = countries.sort();
   $('.country-select').each(function () {
     var select = $(this);
     var id = select.attr('id');
+    addHighlightedCountires(select);
     $.each(countries, function (key, country) {
       if (country == CovidDayZero.countries[id]) {
         select.append('<option selected value="' + country + '">' + country + '</option>');
       } else {
         select.append('<option value="' + country + '">' + country + '</option>');
       }
-
     });
+
     select.on('change', function () {
       CovidDayZero.countries[id] = this.value;
-      updateChart();
+      updateCharts();
+    });
+
+    $('#clear-all-countries').on('click', function (e) {
+      event.preventDefault();
+      CovidDayZero.countries = {
+        c1: null,
+        c2: null,
+        c3: null,
+        c4: null
+      };
+
+      $('.country-select').each(function () {
+        $(this).val('');
+      });
+      updateCharts();
     });
   });
 }
@@ -183,6 +199,20 @@ function createChart(canvas, xTitle) {
       }
     }
   });
+}
+
+function addHighlightedCountires(select) {
+  select.append('<option value="Italy">Italy</option>');
+  select.append('<option value="Spain">Spain</option>');
+  select.append('<option value="China">China</option>');
+  select.append('<option value="Iran">Iran</option>');
+  select.append('<option value="France">France</option>');
+  select.append('<option value="US">USA</option>');
+  select.append('<option value="United Kingdom">United Kingdom</option>');
+  select.append('<option value="Netherlands">Netherlands</option>');
+  select.append('<option value="Belgium">Belgium</option>');
+  select.append('<option value="Sweden">Sweden</option>');
+  select.append('<option disabled value="test">---------------------</option>');
 }
 
 function objValues(obj) {

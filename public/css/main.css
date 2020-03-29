@@ -27,6 +27,10 @@ canvas {
   font-weight: bold;
 }
 
+#clear-all-countries:hover {
+  text-decoration: none !important;
+}
+
 @media only screen and (max-width: 850px) {
   canvas {
     height: 250px !important;
