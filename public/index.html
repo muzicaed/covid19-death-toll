@@ -83,7 +83,7 @@
           <option value="">- No country -</option>
         </select>
       </div>
-      <div class="col-1 d-none d-sm-block">
+      <div class="col-1">
         <div style="display: flex; align-items: center; height: 100%;">
           <a id="clear-all-countries" href="#" style="display: inline-block;">
             <span aria-hidden="true" style="font-size: 1.5em;">&times;</span>
@@ -91,13 +91,19 @@
         </div>
       </div>
     </div>
+
     <div class="row d-lg-none mobile-banner" style="margin-bottom:1em">
       <div class="col-12">
         <div class="card">
           <div class="card-body">
             Use landscape for best experience.<br />
-            From Facebook/LinkedIn? I recomend opening this page in your browser, landscape mode usually does not work
+            Facebook/LinkedIn? I recomend using your browser, landscape mode usually does not work
             in social media apps.
+            <div id="copy-link-wrapper" style="margin-top: 2px;">
+              <a id="copy-link" href="#">Copy link to this page</a>
+              <input style="width: 10px; display: none;" type="text" value="https://covid19-death-toll.herokuapp.com"
+                id="copy-input">
+            </div>
           </div>
         </div>
       </div>
@@ -119,6 +125,31 @@
         </div>
       </div>
     </div>
+
+    <div class="row" style="margin-top: 2em">
+      <div class="col-12">
+        <h2>Weekly death toll per day</h2>
+        <div>Each date (data point) shows the sum of the number of deaths for the past week for that specific date. This
+          model can be used to compare if the situation is getting worse or better for specific countries. If the curve
+          is pointing upwards, <i>this could indicate</i> the situation is getting worse. Likewise if the curve is
+          flatening or pointing
+          downwards, <i>this could indicate</i> the situtation is improving. Try
+          selecting only China in the top bar to see a good example, you can use the "x" to clear the current
+          selected
+          countries. <br /><i>Please note that this type chart is very sensitive to delayed data.</i>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <canvas id="incPerWeek"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="row" style="margin-top: 2em">
       <div class="col-12">
         <h2>Chronological comparison</h2>

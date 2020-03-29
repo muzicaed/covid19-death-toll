@@ -3,6 +3,7 @@ var CovidDayZero = {};
 CovidDayZero.data = null;
 CovidDayZero.zeroChart = null;
 CovidDayZero.datesChart = null;
+CovidDayZero.incPerWeekChart = null;
 CovidDayZero.countries = {
   c1: 'Italy',
   c2: 'Spain',
@@ -34,6 +35,10 @@ function initChart() {
   if (datesCanvas) {
     CovidDayZero.datesChart = createChart(datesCanvas, '');
   }
+  var incPerWeekCanvas = $('#incPerWeek');
+  if (incPerWeekCanvas) {
+    CovidDayZero.incPerWeekChart = createChart(incPerWeekCanvas, '');
+  }
 }
 
 function updateCharts() {
@@ -44,10 +49,16 @@ function updateCharts() {
     CovidDayZero.zeroChart.update();
   }
   if (CovidDayZero.datesChart) {
-    var datesData = prepareDatesData();
+    var datesData = prepareDatesData('datesPm');
     CovidDayZero.datesChart.data.labels = datesData.labels;
     CovidDayZero.datesChart.data.datasets = datesData.datasets;
     CovidDayZero.datesChart.update();
+  }
+  if (CovidDayZero.incPerWeekChart) {
+    var perWeekData = prepareDatesData('datesIncPerWeekPm');
+    CovidDayZero.incPerWeekChart.data.labels = perWeekData.labels;
+    CovidDayZero.incPerWeekChart.data.datasets = perWeekData.datasets;
+    CovidDayZero.incPerWeekChart.update();
   }
 }
 
@@ -83,12 +94,12 @@ function createZeroDataset(key, country) {
   };
 }
 
-function prepareDatesData() {
+function prepareDatesData(field) {
   var datasets = [];
   var labels = null;
   $.each(CovidDayZero.countries, function (key, country) {
     if (country) {
-      datasets.push(createDatesDataset(key, country));
+      datasets.push(createDatesDataset(key, country, field));
     }
     if (country && !labels) {
       labels = Object.keys(CovidDayZero.data[country].dates);
@@ -100,8 +111,8 @@ function prepareDatesData() {
   };
 }
 
-function createDatesDataset(key, country) {
-  var countryData = CovidDayZero.data[country].datesPm;
+function createDatesDataset(key, country, field) {
+  var countryData = CovidDayZero.data[country][field];
   return {
     label: country,
     data: objValues(countryData),
@@ -165,6 +176,7 @@ function prepareEvents() {
       $('#chart-type-select-text').html('Compact display of numerical data over a wide range. <a href="https://en.wikipedia.org/wiki/Logarithmic_scale" target="_blank">Wikipedia</a>')
       makeChartLog(CovidDayZero.zeroChart);
       makeChartLog(CovidDayZero.datesChart);
+      makeChartLog(CovidDayZero.incPerWeekChart);
     });
 
     $('#chart-type-select-wrapper #button-lin').on('click', function (e) {
@@ -172,6 +184,21 @@ function prepareEvents() {
       $('#chart-type-select-text').html('"The normal way". Scale is divided into equal parts.')
       makeChartLin(CovidDayZero.zeroChart);
       makeChartLin(CovidDayZero.datesChart);
+      makeChartLin(CovidDayZero.incPerWeekChart);
+    });
+
+    $('#copy-link').on('click', function (e) {
+      e.preventDefault();
+      var input = $('#copy-input')
+      if (input) {
+        input.show();
+        var copy = document.getElementById('copy-input');
+        copy.select();
+        copy.setSelectionRange(0, 99999);
+        document.execCommand('copy');
+        input.hide();
+        $('#copy-link-wrapper').html('Link copied, open your browser and paste.');
+      }
     });
   });
 }
@@ -203,7 +230,6 @@ function createChart(canvas, xTitle) {
 }
 
 function addHighlightedCountires(select, id) {
-  console.log(id);
   select.append('<option ' + (id == 'c1' ? 'selected' : '') + ' value="Italy">Italy</option>');
   select.append('<option  ' + (id == 'c2' ? 'selected' : '') + ' value="Spain">Spain</option>');
   select.append('<option value="China">China</option>');
