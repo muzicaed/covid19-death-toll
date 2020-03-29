@@ -131,10 +131,10 @@ function prepareEvents() {
   $('.country-select').each(function () {
     var select = $(this);
     var id = select.attr('id');
-    addHighlightedCountires(select);
+    addHighlightedCountires(select, id);
     $.each(countries, function (key, country) {
       if (country == CovidDayZero.countries[id]) {
-        select.append('<option selected value="' + country + '">' + country + '</option>');
+        select.append('<option value="' + country + '">' + country + '</option>');
       } else {
         select.append('<option value="' + country + '">' + country + '</option>');
       }
@@ -201,9 +201,10 @@ function createChart(canvas, xTitle) {
   });
 }
 
-function addHighlightedCountires(select) {
-  select.append('<option value="Italy">Italy</option>');
-  select.append('<option value="Spain">Spain</option>');
+function addHighlightedCountires(select, id) {
+  console.log(id);
+  select.append('<option ' + (id == 'c1' ? 'selected' : '') + ' value="Italy">Italy</option>');
+  select.append('<option  ' + (id == 'c2' ? 'selected' : '') + ' value="Spain">Spain</option>');
   select.append('<option value="China">China</option>');
   select.append('<option value="Iran">Iran</option>');
   select.append('<option value="France">France</option>');
@@ -211,7 +212,7 @@ function addHighlightedCountires(select) {
   select.append('<option value="United Kingdom">United Kingdom</option>');
   select.append('<option value="Netherlands">Netherlands</option>');
   select.append('<option value="Belgium">Belgium</option>');
-  select.append('<option value="Sweden">Sweden</option>');
+  select.append('<option  ' + (id == 'c3' ? 'selected' : '') + ' value="Sweden">Sweden</option>');
   select.append('<option disabled value="test">---------------------</option>');
 }
 
