@@ -21,4 +21,4 @@ module.exports = {
 
 setInterval(() => {
   data = null
-}, 3600000)
+}, 1800000)
