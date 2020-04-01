@@ -13,6 +13,7 @@ CovidDataTable.execute = function () {
         tr.append('<th scope="row">' + (i + 1) + '</th>');
         tr.append('<td class="text-nowrap">' + country.country + '</td>');
         tr.append('<td class="text-right text-nowrap">' + formatNumber(country.total) + '</td>');
+        tr.append('<td class="text-right text-nowrap">' + formatNumber(country.totalEstInfected) + '</td>');
         tr.append('<td class="text-right text-nowrap">' + formatNumber(country.totalPm) + '</td>');
         tr.append('<td class="text-right text-nowrap">' + formatNumber(country.population) + '</td>');
         tr.append('<td class="text-right text-nowrap">' + (country.dayZero ? country.dayZero : 'N/A') + '</td>');

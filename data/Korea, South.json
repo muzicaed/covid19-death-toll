@@ -1,1 +1,24 @@
-{"nhits":0,"parameters":{"dataset":["world-population@kapsarc"],"timezone":"UTC","q":"Korea, South","rows":10,"format":"json"},"records":[]}
+{
+  "nhits": 0,
+  "parameters": {
+    "dataset": [
+      "world-population@kapsarc"
+    ],
+    "timezone": "UTC",
+    "q": "Korea, South",
+    "rows": 10,
+    "format": "json"
+  },
+  "records": [
+    {
+      "datasetid": "world-population@kapsarc",
+      "recordid": "eb3556bc6fa9288ce6ca0f7f8de878f89ea95df6",
+      "fields": {
+        "country_name": "Korea, South - MANUAL",
+        "value": 51258352,
+        "year": "2020"
+      },
+      "record_timestamp": "1970-01-01T00:00:00+00:00"
+    }
+  ]
+}

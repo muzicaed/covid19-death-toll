@@ -99,12 +99,7 @@
           <div class="card-body">
             Use landscape for best experience.<br />
             Facebook/LinkedIn? I recomend using your browser, landscape mode usually does not work
-            in social media apps.
-            <div id="copy-link-wrapper" style="margin-top: 2px;">
-              <a id="copy-link" href="#">Copy link to this page</a>
-              <input style="width: 10px; display: none;" type="text" value="https://covid19-death-toll.herokuapp.com"
-                id="copy-input">
-            </div>
+            in social media apps. (https://covid19-death-toll.herokuapp.com)
           </div>
         </div>
       </div>
@@ -120,8 +115,47 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body text-right">
+            <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input id="button-day-0-lin" type="radio" name="options" id="option1" autocomplete="off" checked> Linear
+              </label>
+              <label class="btn btn-secondary">
+                <input id="button-day-0-log" type="radio" name="options" id="option2" autocomplete="off"> Logarithmic
+              </label>
+            </div>
             <canvas id="day-0"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 2em">
+      <div class="col-12">
+        <h2>Estimated currently infected</h2>
+        <div><b style="color: red;">Estimated data, not using confirmed cases!</b><br /><i>Percent of
+            population.</i>This model trys to reverse
+          engineer
+          the current number of
+          infected people for a
+          country. It uses the
+          death toll and derives estimated current infected based on <i>mortality rate</i>. Data is displayed as
+          percentage of population, for the actual estimated value see <a href="./table.html">Data Table</a>.
+        </div>
+        <div>Formula:<ul>
+            <li>Mortality rate = 1,5% (<a
+                href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/global-research-on-novel-coronavirus-2019-ncov">source</a>)
+            </li>
+            <li>Number of infected = (Death toll / Mortality rate) - (Death toll + Recovered)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <canvas id="estInfected"></canvas>
           </div>
         </div>
       </div>
@@ -144,7 +178,15 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body text-right">
+            <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input id="button-week-lin" type="radio" name="options" id="option1" autocomplete="off" checked> Linear
+              </label>
+              <label class="btn btn-secondary">
+                <input id="button-week-log" type="radio" name="options" id="option2" autocomplete="off"> Logarithmic
+              </label>
+            </div>
             <canvas id="incPerWeek"></canvas>
           </div>
         </div>
@@ -160,7 +202,15 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body text-right">
+            <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input id="button-chron-lin" type="radio" name="options" id="option1" autocomplete="off" checked> Linear
+              </label>
+              <label class="btn btn-secondary">
+                <input id="button-chron-log" type="radio" name="options" id="option2" autocomplete="off"> Logarithmic
+              </label>
+            </div>
             <canvas id="dates"></canvas>
           </div>
         </div>
@@ -180,21 +230,10 @@
     </div>
   </div>
 
-  <div id="chart-type-select-wrapper">
-    <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-secondary active">
-        <input id="button-lin" type="radio" name="options" id="option1" autocomplete="off" checked> Linear
-      </label>
-      <label class="btn btn-secondary">
-        <input id="button-log" type="radio" name="options" id="option2" autocomplete="off"> Logarithmic
-      </label>
-    </div>
-    <div id="chart-type-select-text">"The normal way". Scale is divided into equal parts.</div>
-  </div>
-
   <div class="jumbotron text-center bg-dark" style="color: #fff; margin-bottom:0; margin-top: 1em;">
     <div>Made by: Mikael Hellman</a></div>
-    <div>Data source: <a target="_blank" href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE</a></div>
+    <div>Data source death toll and recovered: <a target="_blank"
+        href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE</a></div>
     <div>Population for Italy, Spain, Iran, France, Netherlands, Switzerland, Andorra, Luxembourg, Belgium,
       China, United Kingdom, Iceland, Denmark, Sweden, Portugal, Austria, Norway, USA, Ireland, Slovenia,
       Germany:&nbsp;<a target="_blank" href="https://www.worldometers.info">www.worldometers.info</a>

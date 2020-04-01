@@ -30,21 +30,6 @@ canvas {
   text-decoration: none !important;
 }
 
-#chart-type-select-wrapper {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #eee;
-  padding: 0.5em;
-}
-
-#chart-type-select-text {
-  margin-left: 1em;
-  font-size: 0.8em;
-}
-
 @media only screen and (max-width: 850px) {
   canvas {
     height: 250px !important;

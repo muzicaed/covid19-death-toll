@@ -66,7 +66,8 @@
     <div class="row">
       <div class="col-12">
         <div>Ordered by death per million (Death PM)</div>
-        <div><sup>*</sup>Day 0 = Date when death per million population > 1.0</div>
+        <div><sup>*</sup>Est. infected = Derived estimate based on <i>mortality rate</i></div>
+        <div><sup>**</sup>Day 0 = Date when death per million population > 1.0</div>
         <div class="table-responsive">
           <table class="table">
             <thead class="thead-dark">
@@ -74,9 +75,10 @@
                 <th>#</th>
                 <th class="text-nowrap">Country</th>
                 <th class="text-nowrap text-right">Death toll</th>
+                <th class="text-nowrap text-right">Est. infected<sup>*</sup></th>
                 <th class="text-nowrap text-right">Death PM</th>
                 <th class="text-nowrap text-right">Population</th>
-                <th class="text-nowrap text-right">Day-0<sup>*</sup></th>
+                <th class="text-nowrap text-right">Day-0<sup>**</sup></th>
               </tr>
             </thead>
             <tbody id="table-body">
@@ -100,7 +102,8 @@
 
   <div class="jumbotron text-center" style="margin-bottom:0; margin-top: 1em;">
     <div>Made by: Mikael Hellman</a></div>
-    <div>Data source: <a href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE</a></div>
+    <div>Data source death toll and recovered: <a target="_blank"
+        href="https://github.com/CSSEGISandData/COVID-19">Johns Hopkins CSSE</a></div>
     <div>Population for Italy, Spain, Iran, France, Netherlands, Switzerland, Andorra, Luxembourg, Belgium,
       China, United Kingdom, Iceland, Denmark, Sweden, Portugal, Austria, Norway, USA, Ireland, Slovenia,
       Germany:&nbsp;<a href="https://www.worldometers.info">www.worldometers.info</a>

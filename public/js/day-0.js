@@ -39,6 +39,11 @@ function initChart() {
   if (incPerWeekCanvas) {
     CovidDayZero.incPerWeekChart = createChart(incPerWeekCanvas, '');
   }
+
+  var estInfectedCanvas = $('#estInfected');
+  if (estInfectedCanvas) {
+    CovidDayZero.estInfectedChart = createEstInfectedChart(estInfectedCanvas);
+  }
 }
 
 function updateCharts() {
@@ -59,6 +64,13 @@ function updateCharts() {
     CovidDayZero.incPerWeekChart.data.labels = perWeekData.labels;
     CovidDayZero.incPerWeekChart.data.datasets = perWeekData.datasets;
     CovidDayZero.incPerWeekChart.update();
+  }
+
+  if (CovidDayZero.estInfectedChart) {
+    var estInfectedData = prepareDatesData('datesEstInfectedPercent');
+    CovidDayZero.estInfectedChart.data.labels = estInfectedData.labels;
+    CovidDayZero.estInfectedChart.data.datasets = estInfectedData.datasets;
+    CovidDayZero.estInfectedChart.update();
   }
 }
 
@@ -171,34 +183,34 @@ function prepareEvents() {
       updateCharts();
     });
 
-    $('#chart-type-select-wrapper #button-log').on('click', function (e) {
+    $('#button-day-0-lin').on('click', function (e) {
       e.preventDefault();
-      $('#chart-type-select-text').html('Compact display of numerical data over a wide range. <a href="https://en.wikipedia.org/wiki/Logarithmic_scale" target="_blank">Wikipedia</a>')
-      makeChartLog(CovidDayZero.zeroChart);
-      makeChartLog(CovidDayZero.datesChart);
-      makeChartLog(CovidDayZero.incPerWeekChart);
+      makeChartLin(CovidDayZero.zeroChart);
     });
 
-    $('#chart-type-select-wrapper #button-lin').on('click', function (e) {
+    $('#button-day-0-log').on('click', function (e) {
       e.preventDefault();
-      $('#chart-type-select-text').html('"The normal way". Scale is divided into equal parts.')
-      makeChartLin(CovidDayZero.zeroChart);
-      makeChartLin(CovidDayZero.datesChart);
+      makeChartLog(CovidDayZero.zeroChart);
+    });
+
+    $('#button-week-lin').on('click', function (e) {
+      e.preventDefault();
       makeChartLin(CovidDayZero.incPerWeekChart);
     });
 
-    $('#copy-link').on('click', function (e) {
+    $('#button-week-log').on('click', function (e) {
       e.preventDefault();
-      var input = $('#copy-input')
-      if (input) {
-        input.show();
-        var copy = document.getElementById('copy-input');
-        copy.select();
-        copy.setSelectionRange(0, 99999);
-        document.execCommand('copy');
-        input.hide();
-        $('#copy-link-wrapper').html('Link copied, open your browser and paste.');
-      }
+      makeChartLog(CovidDayZero.incPerWeekChart);
+    });
+
+    $('#button-chron-lin').on('click', function (e) {
+      e.preventDefault();
+      makeChartLin(CovidDayZero.datesChart);
+    });
+
+    $('#button-chron-log').on('click', function (e) {
+      e.preventDefault();
+      makeChartLog(CovidDayZero.datesChart);
     });
   });
 }
@@ -209,6 +221,9 @@ function createChart(canvas, xTitle) {
     type: 'line',
     data: null,
     options: {
+      tooltips: {
+        mode: 'x'
+      },
       responsive: true,
       maintainAspectRatio: false,
       scales: {
@@ -229,6 +244,34 @@ function createChart(canvas, xTitle) {
   });
 }
 
+function createEstInfectedChart(canvas) {
+  return new Chart(canvas, {
+    type: 'line',
+    data: null,
+    options: {
+      tooltips: {
+        mode: 'x'
+      },
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Estimated percent of population infected'
+          },
+          ticks: {
+            min: 0,
+            callback: function (value) {
+              return value + '%'
+            }
+          }
+        }]
+      }
+    }
+  });
+}
+
 function addHighlightedCountires(select, id) {
   select.append('<option ' + (id == 'c1' ? 'selected' : '') + ' value="Italy">Italy</option>');
   select.append('<option  ' + (id == 'c2' ? 'selected' : '') + ' value="Spain">Spain</option>');
@@ -240,6 +283,7 @@ function addHighlightedCountires(select, id) {
   select.append('<option value="Netherlands">Netherlands</option>');
   select.append('<option value="Belgium">Belgium</option>');
   select.append('<option  ' + (id == 'c3' ? 'selected' : '') + ' value="Sweden">Sweden</option>');
+  select.append('<option value="Korea, South">South Korea</option>');
   select.append('<option disabled value="test">---------------------</option>');
 }
 
