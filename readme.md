@@ -1,1 +1,3 @@
 Very quick and dirty...
+Check the site: 
+http://covid19-death-toll.herokuapp.com/
