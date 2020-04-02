@@ -275,16 +275,18 @@ function createEstInfectedChart(canvas) {
 function addHighlightedCountires(select, id) {
   select.append('<option ' + (id == 'c1' ? 'selected' : '') + ' value="Italy">Italy</option>');
   select.append('<option  ' + (id == 'c2' ? 'selected' : '') + ' value="Spain">Spain</option>');
-  select.append('<option value="China">China</option>');
-  select.append('<option value="Iran">Iran</option>');
-  select.append('<option value="France">France</option>');
-  select.append('<option value="US">USA</option>');
-  select.append('<option value="United Kingdom">United Kingdom</option>');
-  select.append('<option value="Netherlands">Netherlands</option>');
   select.append('<option value="Belgium">Belgium</option>');
+  select.append('<option value="Netherlands">Netherlands</option>');
+  select.append('<option value="France">France</option>');
+  select.append('<option value="Switzerland">Switzerland</option>');
+  select.append('<option value="Luxembourg">Luxembourg</option>');
+  select.append('<option value="Iran">Iran</option>');
+  select.append('<option value="United Kingdom">United Kingdom</option>');
   select.append('<option  ' + (id == 'c3' ? 'selected' : '') + ' value="Sweden">Sweden</option>');
+  select.append('<option value="US">USA</option>');
   select.append('<option value="Korea, South">South Korea</option>');
-  select.append('<option disabled value="test">---------------------</option>');
+  select.append('<option value="China">China</option>');
+  select.append('<option disabled value="">---------------------</option>');
 }
 
 function objValues(obj) {
