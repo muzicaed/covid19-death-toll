@@ -19,10 +19,15 @@ CovidDayZero.borderColors = {
 
 CovidDayZero.execute = function () {
   initChart();
+  var timmer = setTimeout(function () {
+    $('#loading-screen').fadeIn(100);
+  }, 700);
   $.getJSON('/data.json', function (data) {
+    clearTimeout(timmer);
     CovidDayZero.data = data;
     prepareEvents();
     updateCharts();
+    $('#loading-screen').fadeOut(400);
   });
 }
 
